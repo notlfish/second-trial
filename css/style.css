@@ -1,0 +1,5 @@
+#radio-buttons, #checkboxes {
+    display: flex;
+    flex-direction: column;
+}
+

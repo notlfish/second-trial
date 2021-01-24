@@ -28,13 +28,55 @@
     </div>
     <div>
       <form id ="survey-form">
-        <input type="text" id="name" placeholder="my name" required> <br>
-        <input type="email" id="email" placeholder="Enter your email" required> <br>
-        <button type="submit">Submit</button>
-        <!-- User Story #7: Inside the form, I can enter a number in a field with id="number".
-
-User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
--->
+        <label for="name" id="name-label">
+          <input type="text" id="name" placeholder="my name" required> <br>
+        </label>
+        <label for="email" id="email-label">
+          <input type="email" id="email" placeholder="Enter your email" required> <br>
+        </label>
+        <label for="number" id="number-label">
+          <input type="number" id="number" min="0" max="1000" placeholder="number max 100" required> <br>        
+        </label>
+        <label for="dropdown">Choose a car:</label>
+        <select name="cars" id="dropdown">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select> <br><br>
+        <div id="radio-buttons">
+          <label for="definitely">
+            <input id="definitely" value="definitely" 
+              type="radio" name="liked-trials"> Definitely
+          </label>
+          <label for="not-sure">
+            <input id="not-sure" value="not-sure" 
+              type="radio" name="liked-trials"> Not Sure
+          </label><br>
+          <label for="maybe">
+            <input id="maybe" value="maybe" 
+              type="radio" name="liked-trials"> Maybe
+          </label><br>
+        </div>
+        <div id="checkboxes">
+          <label for="zoom-meetings-duration">
+            <input id="zoom-meetings-duration" value="zoom-meetings-duration" 
+              type="checkbox" name="improvements">Zoom Meetings Duration
+          </label>
+          <label for="find-edxon">
+            <input id="find-edxon" value="find-edxon" 
+              type="checkbox" name="improvements">Find missing partners
+          </label>
+          <label for="extend-deadline-missing-partner">
+            <input id="extend-deadline-missing-parnter" 
+              value="extend-deadline-missing-parnter" 
+              type="checkbox" name="improvements">
+            Extend deadlines because of missing partners
+          </label>
+        </div> 
+        <textarea name="comment" form="survey-form" id ="comments-area">additional comments
+        </textarea> <br>
+        <button type="submit" id="submit">Submit</button>                                                                                                                                                                                                                  
       </form>
     </div>
   </body>
